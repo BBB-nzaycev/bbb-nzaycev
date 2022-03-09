@@ -1,14 +1,6 @@
 name: 'Pushed'
 
-on: 
-  branch_protection_rule:
-    types: [edited]
-  push:
-    branches:
-      - '*'         # matches every branch that doesn't contain a '/'
-      - '*/*'       # matches every branch containing a single '/'
-      - '**'        # matches every branch
-      - '!main'   # excludes master
+on: workflow_dispatch
 jobs:
   test-action:
     runs-on: ubuntu-latest
