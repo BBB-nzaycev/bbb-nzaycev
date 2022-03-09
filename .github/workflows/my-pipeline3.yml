@@ -1,6 +1,8 @@
 name: 'Pushed'
 
 on: 
+  branch_protection_rule:
+    types: [edited]
   push:
     branches:
       - '*'         # matches every branch that doesn't contain a '/'
