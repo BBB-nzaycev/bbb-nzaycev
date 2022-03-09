@@ -1,5 +1,7 @@
 name: 'Hello World'
 
+concurrency: prod
+
 on: push
 
 jobs:
