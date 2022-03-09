@@ -1,15 +1,17 @@
 name: 'Hello World'
-description: 'Greet someone and record the time'
 
 on: 
   push:
     branches:
-      main
+      - main
 
 jobs:
   test-action:
+    runs-on: ubuntu-latest
+    steps:
     - name: Check out repository code
-    uses: actions/checkout@v2
-    run: |
-      ls -la
-      echo "lalala"
+      uses: actions/checkout@v2
+    - name: Check files
+      run: |
+        ls -la
+        echo "lalala"
