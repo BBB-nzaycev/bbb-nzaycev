@@ -14,3 +14,10 @@ jobs:
       run: |
         ls -la
         echo "lalala"
+        
+  deployment:
+    environment: prod
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy
+      run: echo "Deploy"
